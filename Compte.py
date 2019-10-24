@@ -1,4 +1,4 @@
-class Compte: #definition de notre classe Compte bancaire
+class Compte: #definition de notre classe Compte
   
   def __init__(self) :   #définition du constructeur
     
