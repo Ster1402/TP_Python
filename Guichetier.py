@@ -14,18 +14,18 @@ class Guichetier(Personne): #Sous-Classe Guichetier ayant comme classe mere Pers
         Personne.__init__(self)
 
     def affSolde(self):
-        print("Solde disponible est de {0} FCFA : Protected".format(compte.solde))
+        print("Solde disponible est de {0} FCFA ".format(compte.solde))
 
     def versement(self,compte,mt):
         # Un montant va etre ajouter au compte du client
         compte.versement(mt)
-        print("Versement de {0} FCFA : Protected".format(mt))
+        print("Versement de {0} FCFA ".format(mt))
         self.affSolde(compte)
     
     def retrait(self,compte,mt):
         """ ici, un test va etre effectuer dans la classe Controlleur pour savoir si le solde disponible est suffisant """
         # Si "OUI" ... un retrait est effectuer par le Guichetier avec la permission du Controleur
         compte.retrait(mt)
-        print("montant débité de {0} FCFA: Protected".format(mt))
+        print("montant débité de {0} FCFA".format(mt))
         
         self.affSolde()
