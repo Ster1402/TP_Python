@@ -1,3 +1,6 @@
+# Boussa Steve Junior
+# Matricule : 18A190FS
+
 import Compte.py
 
 class Guichetier(Personne): #Sous-Classe Guichetier ayant comme classe mere Personne
