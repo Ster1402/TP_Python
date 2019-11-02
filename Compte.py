@@ -1,3 +1,5 @@
+#NDE TSAPI STEVE-ROLAND : 18A029FS
+
 class Compte: #création classe mère Compte bancaire
     
     """Classe représentant le compte d'une personne"""
