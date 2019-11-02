@@ -1,4 +1,5 @@
-#NDE TSAPI STEVE-ROLAND : 18A029FS
+#  NDE TSAPI STEVE-ROLAND
+#  Matricule : 18A029FS
 
 class Compte: #création classe mère Compte bancaire
     
