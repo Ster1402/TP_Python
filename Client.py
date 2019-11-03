@@ -13,12 +13,12 @@ class Client(Personne):
         #Le gestionnaire créé un compte lors de la création d'un client
         self.bank.gestionnaire.ajoutCompte()
         self.dettes=0.0
-        self.sommerecue=0.0
-        self.salaire=240000 #cas d'un enseignent
+        self.sommerecue=0.0 #somme que reçoit le client en main propre (recevoir un chèque par exemple)
+        self.salaire=240000 #juste par exemple 
         
-    def envoyer(self,client,montant):
+    def envoyer(self,client = Client() ,montant):
         if (Banque.controleur.verifier(self.compte.solde,montant)):
-            Banque.guichetier.verser(client.compte,montant)
+            Banque.guichetier.versersement(client.compte,montant)
         else:
             print("solde insuffisant pour effectuer l'envoie")
     
@@ -29,10 +29,10 @@ class Client(Personne):
         else:
             print("l'emprunt n'est pas possible")
             
-    def verser(self,client,montant):
-        self.bank.guichetier.verser(client.compte,montant)
+    def verser(self,client = Client(),montant):
+        self.bank.guichetier.versersement(client.compte,montant)
         
-    def retrait(self,client,montant):
+    def retrait(self,client = Client(),montant):
         if (self.bank.controleur.verifier(self.compte.solde,montant)):
             self.bank.guichetier.verser(client.compte,montant)
         else:
