@@ -22,13 +22,15 @@ class Client(Personne):
         else:
             print("solde insuffisant pour effectuer l'envoie")
     
-    def emprunt(self,salaire,montant):
-        if( ( self.bank.controleur.verifier(self.salaire,montant) ) && self.dettes == 0): #On vérifie que le salaire qu'il touche est suffisant
-            self.bank.guichetier.verser(self.sommerecue,montant) #Le guichetier de la banque lui remet alors l'argent
-            self.dettes = montant
-        else:
-            print("l'emprunt n'est pas possible")
-            
+    def emprunt(self,montant):
+        
+        if (self.dettes == 0):
+            if( ( ((self.bank).controleur).verifier(self.salaire,montant) ) ): #On vérifie que le salaire qu'il touche est suffisant
+                self.bank.guichetier.verser(self.sommerecue,montant) #Le guichetier de la banque lui remet alors l'argent
+                self.dettes = montant
+            else:
+                print("l'emprunt n'est pas possible")
+                
     def verser(self,client = Client(),montant):
         self.bank.guichetier.versersement(client.compte,montant)
         
