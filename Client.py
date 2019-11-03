@@ -8,6 +8,8 @@ import Banque.py
 
 class Client(Personne):
     def __init__(self):
+        Personne.__init__() #Appel du constructeur de la classe mère
+        
         self.bank=Banque()
         self.compte=Compte()
         #Le gestionnaire créé un compte lors de la création d'un client
