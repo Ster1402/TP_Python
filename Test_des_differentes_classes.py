@@ -8,5 +8,3 @@ import Guichetier.py
 import Gestionnaire.py
 import Epargne.py
 import Courant.py
-
-
