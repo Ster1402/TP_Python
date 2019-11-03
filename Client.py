@@ -31,8 +31,8 @@ class Client(Personne):
             else:
                 print("l'emprunt n'est pas possible")
                 
-    def verser(self,client = Client(),montant):
-        self.bank.guichetier.versersement(client.compte,montant)
+    def verser(self,montant):
+        self.bank.guichetier.verser(self.compte,montant)
         
     def retrait(self,client = Client(),montant):
         if (self.bank.controleur.verifier(self.compte.solde,montant)):
