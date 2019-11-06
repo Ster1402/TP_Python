@@ -2,7 +2,7 @@
 
 from Banque import Banque
 from Compte import Compte
-
+from Client import Client
 
 
 #Teste du fonctionnement de la classe Banque()
@@ -39,5 +39,13 @@ if( cont.verifier( c.solde , 5000 ) ):
 else:
   print( "Votre solde est inférieur à 5000 FCFA ! \n" )
 
-#...  
+#Création d'un Client
+
+cli = Client("18A887FS","Ulritch","ulritch02")
+cli.verser(50000)
+cli.verser(70000)
+print(cli) #information sur le client
+cli.retrait(3000)
+
+print(cli.bank) #Information sur la banque du client    
   
