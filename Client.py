@@ -2,25 +2,34 @@
 # Nzoufou Ndouanla Ulritch 
 # Matriucle : 18A887FS
 
-import Compte.py
-import Personne.py
-import Banque.py 
+from Personne import Personne
+from Compte import Compte 
+from Banque import Banque
+from Courant import Courant 
+from Epargne import Epargne
+from Gestionnaire import Gestionnaire 
+from Guichetier import Guichetier
+from Controleur import Controleur
+ 
+
 
 class Client(Personne):
-    def __init__(self):
-        Personne.__init__() #Appel du constructeur de la classe mère
+    def __init__(self,matricule = " " ,nom = " ",prenom = " "):
+        Personne.__init__(self,matricule,nom,prenom) #Appel du constructeur de la classe mère
         
         self.bank=Banque()
         self.compte=Compte()
-        #Le gestionnaire créé un compte lors de la création d'un client
-        self.bank.gestionnaire.ajoutCompte()
-        self.dettes=0.0
-        self.sommerecue=0.0 #somme que reçoit le client en main propre (recevoir un chèque par exemple)
-        self.salaire=240000 #juste par exemple 
         
-    def envoyer(self,client = Client() ,montant):
+        #Le gestionnaire ajoute un compte lors de la création d'un client
+        self.bank.gestionnaire.ajoutCompte( self.bank )
+        
+        self.dettes=0.0
+        self.sommerecue=0.0
+        self.salaire=240000 #cas d'un enseignent
+        
+    def envoyer(self,client,montant):
         if (Banque.controleur.verifier(self.compte.solde,montant)):
-            Banque.guichetier.versersement(client.compte,montant)
+            Banque.guichetier.verser(client.compte,montant)
         else:
             print("solde insuffisant pour effectuer l'envoie")
     
@@ -32,11 +41,11 @@ class Client(Personne):
                 self.dettes = montant
             else:
                 print("l'emprunt n'est pas possible")
-                
+            
     def verser(self,montant):
-        self.bank.guichetier.verser(self.compte,montant)
+        self.bank.guichetier.versement(self.compte,montant)
         
-    def retrait(self,client = Client(),montant):
+    def retrait(self,client,montant):
         if (self.bank.controleur.verifier(self.compte.solde,montant)):
             self.bank.guichetier.verser(client.compte,montant)
         else:
