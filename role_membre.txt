@@ -1,0 +1,17 @@
+NDE TSAPI STEVE-ROLAND, 18A029FS (créer la classe Compte.py et superviser le main.py): 
+
+TCHOUOMKEM NGOUOMOUE ESTHER SORELLE, 18A983FS (créer la classe Personne.py): 
+
+NZOUFOU NDOUANLA ULRITCH, 18A887FS (créer la classe Client.py): 
+
+HAMIDOU OUMAROU, 18A026FS (créer la classe Gestionnaire.py): 
+
+BOUSSA STEVE JUNIOR, 18A190FS (créer la classe Guichetier.py):
+
+NA'AIYA BOURAI NATHANIEL, 18A911FS (créer la classe Controleur.py): 
+
+TSAGUE TEZONG SONIA JANE, 18A030FS (créer la classe Banque.py): 
+
+DJOUDA (créer la classe Epargne.py): 
+
+RAOUL (créer la classe Courant.py): 
