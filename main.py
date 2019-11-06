@@ -16,3 +16,17 @@ print(banq)
 #La création d'un compte ce fait normalement lors de la déclaration d'un Client ( ceci est juste un exemple )
 c = Compte(156,40000)
 print(c)
+
+
+#Le gestionnaire à ici pour role de creer, supprimer un compte dans une instance de Banque
+
+g = Gestionnaire("18A026FS","hmdamiral","amiral")
+g.ajoutCompte(banq)
+print(banq)
+g.ajoutCompte(banq)
+g.ajoutCompte(banq)
+print(banq)
+g.supprimeCompte(banq)
+print(banq)
+
+
