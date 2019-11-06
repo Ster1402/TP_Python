@@ -3,6 +3,7 @@
 from Banque import Banque
 from Compte import Compte
 from Client import Client
+from Courant import Courant
 
 
 #Teste du fonctionnement de la classe Banque()
@@ -49,3 +50,13 @@ cli.retrait(3000)
 
 print(cli.bank) #Information sur la banque du client    
   
+#Grâce à la classe Courant, il est possible d'éffectué des transfert d'argent entre 2 comptes
+#EXEMPLE : 
+ca = Courant(1,50000)
+cb = Courant(2,1500)
+
+ca.transfert(cb , 30000) # On prélève 30000 dans ca pour envoyer à cb
+print(ca)
+print(cb)
+
+#...
