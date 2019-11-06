@@ -19,6 +19,7 @@ class Compte: #création classe mère Compte bancaire
     
     def _get_solde(self):
         print("Votre solde est de {0} FCFA \n".format(self._solde))
+        return self._solde
     
     def _set_solde(self,new_solde):
         print("Votre nouveau solde est de {0} FCFA \n".format(new_solde))
