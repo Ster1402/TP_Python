@@ -29,4 +29,15 @@ print(banq)
 g.supprimeCompte(banq)
 print(banq)
 
+#Le controleur ici à pour rôle de vérifier si le solde du compte est suffisant (pour un retrait)
 
+cont =  Controleur()
+
+#Petit exemple
+if( cont.verifier( c.solde , 5000 ) ):
+  print( "Votre solde est supérieur à 5000 FCFA ! \n" )
+else:
+  print( "Votre solde est inférieur à 5000 FCFA ! \n" )
+
+#...  
+  
