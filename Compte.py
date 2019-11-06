@@ -11,7 +11,7 @@ class Compte: #création classe mère Compte bancaire
     def __str__(self):
         """Méthode appelée lors d'une conversion de l'objet en chaîne"""
         
-        return "Code compte : {0} \nSolde : {1}\n".format(self._numero, self.solde)
+        return "Code compte : {0} \nSolde : {1}\n".format(self._numero, self._solde)
     
     def _get_numero(self):
         print("Votre numéro de compte est : {0} \n".format(self._numero))
