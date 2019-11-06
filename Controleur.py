@@ -1,12 +1,14 @@
 # Na'aiya bourai Nathaniel
 # Matricule : 18A911FS
 
-import Personne.py
-Class contrôleur (Personne):
-def__init__(self):
-Def vérifier (solde , montant):
-If(solde<montant):
-Print("votre solde est insuffisant pour effectuer la transaction")
-Return 1
-Else:
-Return 0
+from Personne import Personne
+
+class Controleur(Personne):
+    def __init__(self):
+        Personne.__init__(self);
+        
+    def verifier(solde,mt):
+         if(solde < mt ):
+             return 0; #Pour false
+         else: 
+             return 1; #Pour true
