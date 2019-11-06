@@ -28,4 +28,4 @@ class Banque :
         self.capital = 10000000000; # Capital de la banque
         
     def __str__(self):
-        return "\t {0} code : {1}\nCapital : {2} FCFA\nNombre de Compte : {3}\n\n".format(self.nom,self.code,self.capital,self.nbrCompte);
+        return "\t {0} code : {1}\nCapital : {2} FCFA\nNombre de Compte : {3}\n\n".format(self.nom,self.codeB,self.capital,self.nbrCompte);
