@@ -45,9 +45,10 @@ class Client(Personne):
     def verser(self,montant):
         self.bank.guichetier.versement(self.compte,montant)
         
-    def retrait(self,client,montant):
+    def retrait(self,montant):
         if (self.bank.controleur.verifier(self.compte.solde,montant)):
-            self.bank.guichetier.verser(client.compte,montant)
+            self.bank.guichetier.retrait(self.compte,montant)
+            self.sommerecue += montant
         else:
             print("solde insuffisant pour effectuer le retrait")
             
