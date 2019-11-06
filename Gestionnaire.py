@@ -18,5 +18,6 @@ class Gestionnaire(Personne):
         
         bank.nbrCompte = bank.nbrCompte + 1;
         
-        
+    def supprimeCompte(self, bank ):
+        bank.nbrCompte = bank.nbrCompte - 1;    
 
