@@ -58,5 +58,6 @@ class Client(Personne):
     def passerAuCompteCourant(self):
         self.compte = Courant()
     
-    
+    def __str__(self):
+        return "\tClient\n" + Personne.__str__(self)
 
