@@ -1,31 +1,31 @@
 # Boussa Steve Junior
 # Matricule : 18A190FS
 
-import Compte.py
+from Compte import Compte
+from Personne import Personne
 
 class Guichetier(Personne): #Sous-Classe Guichetier ayant comme classe mere Personne
 
     # Notre méthode constructeur
     
-    def __init__(self):
+    def __init__(self,mat = " ",nom = " ", prenom =" "):
      
         #Constructeur de notre classe
         # On appelle explicitement le constructeur de Personne :
-        Personne.__init__(self)
+        Personne.__init__(self,mat,nom,prenom)
 
-    def affSolde(self):
+    def affSolde(self,compte):
         print("Solde disponible est de {0} FCFA ".format(compte.solde))
 
-    def versement(self,compte,mt):
+    def versement(self,compte = Compte(),mt = 0.0):
         # Un montant va etre ajouter au compte du client
         compte.versement(mt)
-        print("Versement de {0} FCFA ".format(mt))
-        self.affSolde(compte)
     
     def retrait(self,compte,mt):
         """ ici, un test va etre effectuer dans la classe Controlleur pour savoir si le solde disponible est suffisant """
         # Si "OUI" ... un retrait est effectuer par le Guichetier avec la permission du Controleur
         compte.retrait(mt)
-        print("montant débité de {0} FCFA".format(mt))
+
+    def __str__(self):
+        return "\tGuichetier\n" + Personne.__str__(self)
         
-        self.affSolde()
