@@ -12,3 +12,6 @@ class Controleur(Personne):
              return 0; #Pour false
          else: 
              return 1; #Pour true
+
+    def __str__(self):
+        return "\tControleur\n" + Personne.__str__(self)    
