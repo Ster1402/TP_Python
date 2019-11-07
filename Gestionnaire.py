@@ -21,3 +21,5 @@ class Gestionnaire(Personne):
     def supprimeCompte(self, bank ):
         bank.nbrCompte = bank.nbrCompte - 1;    
 
+    def __str__(self):
+        return "\tGestionnaire\n" + Personne.__str__(self)
