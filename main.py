@@ -4,6 +4,7 @@ from Banque import Banque
 from Compte import Compte
 from Client import Client
 from Courant import Courant
+from Personne import Personne
 
 
 #Teste du fonctionnement de la classe Banque()
@@ -58,5 +59,16 @@ cb = Courant(2,1500)
 ca.transfert(cb , 30000) # On prélève 30000 dans ca pour envoyer à cb
 print(ca)
 print(cb)
+
+#La classe Personne est la super-classe pour Client, Gestionnaire, Controleur et Guichetier
+p = Personne("18A983FS","TNES","Esthy") 
+
+#On peut le spécialiser en Client
+p = Client()
+#Qui  peut être aussi recruté par la banque pour devenir un Controleur par exemple
+p = Controleur()
+
+#La classe Personne se contente de regrouper ensemble les attributs propres aux Guichetier, Controleur et Gestionnaire
+
 
 #...
