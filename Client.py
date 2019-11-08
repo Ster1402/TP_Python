@@ -18,7 +18,7 @@ class Client(Personne):
         Personne.__init__(self,matricule,nom,prenom) #Appel du constructeur de la classe mère
         
         self.bank=Banque()
-        self.compte=Compte()
+        self.compte=Courant()
         
         #Le gestionnaire ajoute un compte lors de la création d'un client
         self.bank.gestionnaire.ajoutCompte( self.bank )
