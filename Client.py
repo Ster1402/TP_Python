@@ -24,23 +24,28 @@ class Client(Personne):
         self.bank.gestionnaire.ajoutCompte( self.bank )
         
         self.dettes=0.0
-        self.sommerecue=0.0
-        self.salaire=240000 #cas d'un enseignent
+        self.sommerecue=0.0 #Lors d'un emprunt
+        self.salaire=240000 #par exemple juste
         
     def envoyer(self,client,montant):
-        if (Banque.controleur.verifier(self.compte.solde,montant)):
-            Banque.guichetier.verser(client.compte,montant)
+        
+        if (self.bank.controleur.verifier(self.compte.solde,montant)):
+            self.bank.guichetier.versement(client.compte,montant)
+            self.compte.solde -= montant
+            print("__Envoie de {2} à {0} {1} éffectué avec succès !__ \n".format(client.nom,client.prenom,montant))
         else:
-            print("solde insuffisant pour effectuer l'envoie")
-    
+            print("_Solde insuffisant pour effectuer l'envoie_")
+          
     def emprunt(self,montant):
         
         if (self.dettes == 0):
             if( ( ((self.bank).controleur).verifier(self.salaire,montant) ) ): #On vérifie que le salaire qu'il touche est suffisant
-                self.bank.guichetier.verser(self.sommerecue,montant) #Le guichetier de la banque lui remet alors l'argent
+                self.bank.guichetier.preter(self.sommerecue,montant) #Le guichetier de la banque lui remet alors l'argent
                 self.dettes = montant
+                print("{0} {1} Somme preçu {2} FCFA ! \n".format(self.nom,self.prenom,montant))
             else:
-                print("l'emprunt n'est pas possible")
+                print("Vous avez des dettes à rembourser ou bien votre salaire est insuffisant pour votre emprunter cette somme !\n")
+            
             
     def verser(self,montant):
         self.bank.guichetier.versement(self.compte,montant)
@@ -48,9 +53,9 @@ class Client(Personne):
     def retrait(self,montant):
         if (self.bank.controleur.verifier(self.compte.solde,montant)):
             self.bank.guichetier.retrait(self.compte,montant)
-            self.sommerecue += montant
+            self.sommerecue = montant
         else:
-            print("solde insuffisant pour effectuer le retrait")
+            print("Solde insuffisant pour effectuer le retrait ! \n")
             
     def passerAuCompteEpargne(self):
         self.compte = Epargne()
@@ -59,5 +64,5 @@ class Client(Personne):
         self.compte = Courant()
     
     def __str__(self):
-        return "\tClient\n" + Personne.__str__(self)
+        return "\t__Client__\n\n" + Personne.__str__(self) + "\nCapital : {0} FCFA\n\n".format(self.compte.solde)
 
