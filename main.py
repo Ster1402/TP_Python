@@ -71,4 +71,6 @@ p = Controleur()
 #La classe Personne se contente de regrouper ensemble les attributs propres aux Guichetier, Controleur et Gestionnaire
 
 
-#...
+#Ici on simule des échanges bancaires entre deux client : client1 et client2
+
+
