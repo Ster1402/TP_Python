@@ -12,6 +12,6 @@ NA'AIYA BOURAI NATHANIEL, 18A911FS (créer la classe Controleur.py):
 
 TSAGUE TEZONG SONIA JANE, 18A030FS (créer la classe Banque.py): 
 
-DJOUDA (créer la classe Epargne.py): 
+DJOUDA TCHOUNDA CABREL, 18A043FS (créer la classe Epargne.py): 
 
-RAOUL (créer la classe Courant.py): 
+FOFOU TANTO RAOUL, 18A031FS (créer la classe Courant.py): 
