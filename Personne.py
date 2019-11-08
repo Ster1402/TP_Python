@@ -8,7 +8,7 @@ class Personne:
         self._prenom = prenom
         
     def __str__(self): 
-        return "matricule :" + self._matricule + "\nnom :" + self._nom + "\nprenom :" + self._prenom
+        return "Matricule : " + self._matricule + "\nNom : " + self._nom + "\nPrenom : " + self._prenom
     
     def _get_matricule(self):
         return self._matricule
