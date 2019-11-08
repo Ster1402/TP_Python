@@ -15,7 +15,7 @@ class Guichetier(Personne): #Sous-Classe Guichetier ayant comme classe mere Pers
         Personne.__init__(self,mat,nom,prenom)
 
     def affSolde(self,compte):
-        print("Solde disponible est de {0} FCFA ".format(compte.solde))
+        print("\tGuichetier\nVotre solde disponible est de {0} FCFA ".format(compte.solde))
 
     def versement(self,compte = Compte(),mt = 0.0):
         # Un montant va etre ajouter au compte du client
@@ -25,7 +25,11 @@ class Guichetier(Personne): #Sous-Classe Guichetier ayant comme classe mere Pers
         """ ici, un test va etre effectuer dans la classe Controlleur pour savoir si le solde disponible est suffisant """
         # Si "OUI" ... un retrait est effectuer par le Guichetier avec la permission du Controleur
         compte.retrait(mt)
-
+        
+    def preter(self,sommeDonner = 0.0,mt = 0.0):
+        sommeDonner += mt
+        print("\tGuichetier\nEmprunt de {0} FCFA éffectué ! ".format(mt))
+    
     def __str__(self):
         return "\tGuichetier\n" + Personne.__str__(self)
         
