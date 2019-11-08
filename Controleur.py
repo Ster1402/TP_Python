@@ -7,7 +7,7 @@ class Controleur(Personne):
     def __init__(self):
         Personne.__init__(self);
         
-    def verifier(solde,mt):
+    def verifier(self,solde,mt):
          if(solde < mt ):
              return 0; #Pour false
          else: 
