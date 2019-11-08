@@ -73,4 +73,30 @@ p = Controleur()
 
 #Ici on simule des échanges bancaires entre deux client : client1 et client2
 
+print("\t**************************\n")
+print("\t*       Simulation       *\n")
+print("\t**************************\n")
+
+
+client1 = Client("18A029FS","NDE TSAPI","Steve-R.")
+client2 = Client("18A887FS","ULRITCH","NZOUFOU")
+
+print("\nLes clients mettent de l'argent dans leur compte\n\n")
+client1.verser(80000) #Versement de 80000 dans le compte bancaire
+client2.verser(40000) 
+print(client1)
+print(client2)
+
+print("Le client1 éffectue un emprunt d'argent ! \n\n")
+client1.emprunt(40000)
+print(client1)
+
+print("Le client1 envoie de l'argent dans le compte du client2 \n\n")
+client1.envoyer(client2,7500)
+client1.envoyer(client2,9000)
+print(client2)
+
+print("Le client2 retire de l'argent dans son compte \n")
+client2.retrait(60000)
+print(client2)
 
