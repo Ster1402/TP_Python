@@ -5,6 +5,10 @@ from Compte import Compte
 from Client import Client
 from Courant import Courant
 from Personne import Personne
+from Courant import Courant
+from Gestionnaire import Gestionnaire
+from Guichetier import Guichetier
+from Controleur import Controleur
 
 
 #Teste du fonctionnement de la classe Banque()
