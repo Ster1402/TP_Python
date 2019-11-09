@@ -6,7 +6,7 @@ NZOUFOU NDOUANLA ULRITCH, 18A887FS (Client.py):
 
 HAMIDOU OUMAROU, 18A026FS (Gestionnaire.py): 
 
-BOUSSA STEVE JUNIOR, 18A190FS (Guichetier.py):
+BOUSSA STEVE JUNIOR, 18A190FS (Guichetier.py): https://youtu.be/5FtrSX7uoqo
 
 NA'AIYA BOURAI NATHANIEL, 18A911FS (Controleur.py): 
 
