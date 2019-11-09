@@ -1,4 +1,4 @@
-NDE TSAPI STEVE-ROLAND, 18A029FS (Compte.py): 
+NDE TSAPI STEVE-ROLAND, 18A029FS (Compte.py): https://youtu.be/flOVJxac4hU
 
 TCHOUOMKEM NGOUOMOUE ESTHER SORELLE, 18A983FS (Personne.py): 
 
@@ -6,7 +6,7 @@ NZOUFOU NDOUANLA ULRITCH, 18A887FS (Client.py):
 
 HAMIDOU OUMAROU, 18A026FS (Gestionnaire.py): 
 
-BOUSSA STEVE JUNIOR, 18A190FS (Guichetier.py):https://youtu.be/Tb5YqJbipKU
+BOUSSA STEVE JUNIOR, 18A190FS (Guichetier.py): https://youtu.be/Tb5YqJbipKU
 
 NA'AIYA BOURAI NATHANIEL, 18A911FS (Controleur.py): 
 
