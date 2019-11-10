@@ -1,15 +1,17 @@
 # Na'aiya bourai Nathaniel
 # Matricule : 18A911FS
 
-from personne import personne
-class controleur(personne):
-    def__init__(self):
-        personne.__init__(self);
-        def verifier(self,solde,mt):
-            if(solde<=mt):
-                return 0;#si la somme demandée est superieur au solde 
-            else:
-                return 1;#si la somme est inferieur au solde
-            
-            def__str__(self):
-                return "\tcontroleur\n" + personne.__str__(self)
+from Personne import Personne
+
+class Controleur(Personne):
+    def __init__(self):
+        Personne.__init__(self);
+
+    def verifier(self,solde,mt):
+         if(solde < mt ):
+             return 0; #Pour false
+         else: 
+             return 1; #Pour true
+
+    def __str__(self):
+        return "\tControleur\n" + Personne.__str__(self)    
