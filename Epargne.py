@@ -4,7 +4,7 @@
 from Compte import Compte
 
 class Epargne(Compte):
-  def __init(self,n = 0, mt = 0.0):
+  def __init__(self,n = 0, mt = 0.0):
     Compte.__init__(self,n,mt)
   
   def consulterEpargne(self):
