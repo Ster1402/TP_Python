@@ -8,7 +8,7 @@ HAMIDOU OUMAROU, 18A026FS (Gestionnaire.py):
 
 BOUSSA STEVE JUNIOR, 18A190FS (Guichetier.py): https://youtu.be/Tb5YqJbipKU
 
-NA'AIYA BOURAI NATHANIEL, 18A911FS (Controleur.py): 
+NA'AIYA BOURAI NATHANIEL, 18A911FS (Controleur.py): https://youtu.be/gVNHbGjXG48
 
 TSAGUE TEZONG SONIA JANE, 18A030FS (Banque.py): 
 
